@@ -1,0 +1,100 @@
+.working {
+    background-color: $headrs-color;
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        width: 100%;
+        height: .6rem;
+        background-image: url(../img/bah_2.png);
+        top: -.6rem;       
+    }
+}
+
+.triangle {
+    padding: 0 4rem 8rem 8rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+        margin-left: 4rem;
+    }
+
+    @include respond(phone) {
+        padding: 0;
+        padding-bottom: 6rem;
+        margin-left: 0;
+    }
+
+    &__icon {
+        transition: all .5s ease;
+
+        &:not(:first-child) {
+            margin-left: -4rem;
+
+            @include respond(phone) {
+                margin: 0;
+                width: 90%;
+            }
+        }
+    }
+
+    &__item {
+        flex: 0 0 25%;
+        position: relative;
+
+        @include respond(tab-port) {
+            flex: 0 0 40%;
+        }
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__image {
+        height: 4rem;
+        margin-right: .7rem;
+        transition: transform .5s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        color: #fff;
+        font-family: "PFCentroSlabProBold";
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    &__content {
+        width: 80%;
+        display: flex;
+        opacity: 0;
+        transition: opacity .5s .8s ease;
+        position: absolute;
+        top: 25%;
+        left: 0;
+
+        &  span {
+            margin-top: 1rem;
+        }
+
+        @include respond(tab-port) {
+            top: 35%;
+        }
+
+        @include respond(phone) {
+            width: 70%;
+        }
+    }
+
+    &__content--on {
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,91 @@
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10.5rem;
+
+    &--pro {
+        align-items: flex-start;
+        padding-top: 8rem;
+    }
+
+    &--deals {
+        padding-top: 9rem;
+    }
+
+    &--accounting {
+        margin-top: -.5rem;
+    }
+
+    &--advantages {
+        padding-top: 8rem;
+    }
+
+    &__main {
+        font-family: "PFCentroSlabProMedium";
+        font-size: 3rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            @include pseudo;
+            height: 4px;
+            background-color: $main-color;
+            width: 16.5rem;
+            top: 6rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1rem;
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &--pro::after {
+            left: 0;
+            transform: none;
+        }
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        padding: 5.7rem 0;
+        width: 90%;
+        text-align: center;
+        line-height: 1.4;
+
+        &--accounting {
+            color: #e5e5e5;
+        }
+
+        &--pro {
+            text-align: justify;
+            width: 100%;
+            padding-bottom: 6rem;
+        }
+    }
+
+    &__text a,
+    &--additional a {
+        color: $main-color;
+    }
+
+    &--additional {
+        color: #394b5f;
+        text-transform: uppercase;
+        font-family: "PFCentroSlabProMedium";
+        font-size: 2.4rem;
+        margin-bottom: 5rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    &--accounting {
+        color: #fff;
+    }
+}

@@ -1,0 +1,147 @@
+.accounting {
+    background-color: $headrs-color;
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        width: 100%;
+        height: .6rem;
+        background-image: url(../img/bah_2.png);
+        top: -.6rem;       
+    }
+
+    &__wrapper {
+        background-image: url(../img/s3_sun_bg.png);
+        background-repeat: no-repeat;
+        background-position: 50% 28rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        @include respond(tab-land) {
+            background: none;
+        }
+    }
+
+    &__logo-box {
+        width: 13.1rem;
+        height: 13.1rem;
+        border-radius: 50%;
+        background-color: $main-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 63rem;
+
+        @include respond(tab-land) {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 7.2rem;
+        height: 7.3rem;
+    }
+
+    //Round List Items
+    
+    &__list {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+
+        @include respond(tab-land) {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &--top {
+            margin-top: 2rem;
+            margin-bottom: 12rem;
+            margin-left: 6rem;
+
+            @include respond(tab-land) {
+                margin-top: 0;
+                margin-bottom: 2rem;
+                margin-left: 0;
+            }
+        }
+
+        &--center {
+            margin-left: 4rem;
+            margin-bottom: 15rem;
+
+            @include respond(tab-land) {
+                margin-left: 0;
+                margin-bottom: 2rem;
+                order: 1;
+            }
+        }
+
+        &--bottom {
+            margin-bottom: 12rem;
+            margin-left: 10rem;
+
+            @include respond(tab-land) {
+                margin-left: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 28rem;
+
+        @include respond(tab-land) {
+            width: 33.333333%;
+            padding: 0 1rem;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 4rem 0;
+        }
+
+        &--top:last-child {
+            margin-left: 8rem;
+
+            @include respond(tab-land) {
+                margin-left: 0;
+            }
+        }
+
+
+        &--center:first-child {
+            margin-right: 50rem;
+
+            @include respond(tab-land) {
+                margin-right: 0;
+            }
+        }
+        
+    }
+
+    &__link {
+        color: $main-color;
+        font-family: "PFCentroSlabProMedium";
+        font-size: 2rem;
+        line-height: 1.09;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        color: #fff;
+
+        &--small {
+            width: 80%;
+        }
+    }
+}
+
+

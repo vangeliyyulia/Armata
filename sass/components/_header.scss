@@ -1,0 +1,239 @@
+.header {
+    background-image: linear-gradient(to bottom, rgba($headrs-color, .85), rgba($headrs-color, .85)),
+                      url(../img/header_bg.jpg),
+                      url(../img/top_gradient.png);
+    background-size: cover;
+    background-position: center center;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10.6rem 0 4rem 0;
+    }
+
+    &__description {
+        flex: 0 0 47%;
+        padding-top: 12rem;
+
+        @include respond(tab-port) {
+            flex: 100%;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading {
+        display: inline-block;
+        color: #fff;
+        font-family: "PFCentroSlabProBold";
+        font-size: 4.3rem;
+        line-height: 1.31;
+        padding-bottom: .8rem;
+        border-bottom: $main-color 8px solid;
+        margin-bottom: 4rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 1.2rem;
+
+        &::before {
+            @include pseudo;
+            width:0;
+            height:0;
+            border-bottom: 6px solid $main-color;
+            border-left: 6px solid transparent; 
+            border-right: 6px solid transparent;
+            transform: rotate(90deg);
+            top: .9rem;
+            left: 0;
+        }
+    }
+
+    &__link {
+        color: #fff;
+        font-size: 1.8rem;
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.logo {
+    &__img {
+        width: 10rem;
+        height: 4.7rem;
+
+        @include respond(phone) {
+            width: 8rem;
+        }
+    }
+
+    &--footer {
+        opacity: .35;
+    }
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4.7rem;
+
+    @include respond(tab-port) {
+        position: relative;
+    }
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-left: 5rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            text-align: center;
+            background-color: #1f2a36;
+            box-shadow: 0 4px 0 #1c242c;
+            width: 80%;
+            margin-left: 0;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 1;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        &--footer {
+            @include respond(tab-port) {
+                top: -40rem;
+            }
+        }
+    }
+
+    &__list.active {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__item {
+        transition: all linear 0.15s;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 3rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba($headrs-color, .6);
+                margin-right: 0;
+            }
+
+            &:hover,
+            &:active {
+                background-color: rgba($headrs-color, .6);
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.4rem;
+        line-height: 3.7;
+        text-decoration: none;
+        transition: all .2s;
+
+        @include respond(tab-port) {
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        &:hover,
+        &:active {
+            color: $main-color;
+            text-decoration: underline;
+
+            @include respond(tab-port) {
+                color: $main-color;
+                text-decoration: none;
+            }
+        }
+
+        &--active {
+            color: $main-color;
+            text-decoration: underline;
+
+            @include respond(tab-port) {
+                color: $main-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.phone {
+    &__text {
+        font-family: "Roboto";
+        font-weight: bold;
+        font-size: 2rem;
+        color: #fff;
+
+        @include respond(tab-port) {
+            margin-left: auto;
+        }
+
+        @include respond(phone) {
+            font-size: 1.7rem;
+        }
+    }
+
+    &--footer {
+        opacity: .45;
+    }
+}
+
+.hamburger {
+    display: none;
+
+    @include respond(tab-port) {
+        display: block;
+        position: relative;
+    }
+}
+
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8.3rem;
+
+    &__img {
+        opacity: .7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+

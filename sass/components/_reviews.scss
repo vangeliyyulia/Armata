@@ -1,0 +1,134 @@
+.reviews {
+    background-color: #e5e5e5;
+    position: relative;
+    padding-bottom: 4rem;
+
+    &::before {
+        @include pseudo;
+        width: 100%;
+        height: .6rem;
+        background-image: url(../img/bah_3.png);
+        top: -.6rem;       
+    }
+}
+
+.slider {
+
+    &__list {
+        list-style: none;
+        position: relative;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 4rem 7rem 4rem;
+    }
+
+    &__img {
+        height: 12rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px $main-color;      
+    }
+
+    &__desc {
+        color: #333;
+        font-size: 1.4rem;
+        line-height: 1.42;
+        text-align: center;
+        padding: 0 10rem;
+
+        @include respond(phone) {
+            padding: 0;
+            text-align: justify;
+        }
+    }
+}
+
+.owl-carousel .owl-item img {
+    width: auto;
+}
+
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.owl-dot.active {
+    outline: none;
+    background-color: $main-color;
+}
+
+.owl-nav button {
+    background-color: transparent;
+    width: 16px;
+    height: 29px;
+    background-image: url(../img/slider_arrows.png);
+    opacity: .5;
+    transition: all .25s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        opacity: 1;
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.owl-prev {
+    position: absolute;
+    left: 20px;
+    top: 20%;
+}
+
+.owl-next {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+.owl-item .slider__img,
+.owl-item .team__heading,
+.owl-item .team__desc,
+.owl-item .slider__desc {
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+}
+
+.owl-item.active .slider__img,
+.owl-item.active .team__heading,
+.owl-item.active .team__desc,
+.owl-item.active .slider__desc {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.owl-item .team__heading,
+.owl-item .team__desc {
+    transition-delay: .4s;
+}
+
+.owl-item .slider__desc {
+    transition-delay: .8s;
+}

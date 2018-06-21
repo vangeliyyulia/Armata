@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'PFCentroSlabProBold';
+	src: local('PFCentroSlabProBold'),
+		   url('../fonts/PFCentroSlabProBold/PFCentroSlabProBold.woff') format('woff');
+	  font-weight: bold;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'PFCentroSlabProMedium';
+	src: local('PFCentroSlabProMedium'),
+		   url('../fonts/PFCentroSlabProMedium/PFCentroSlabProMedium.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewayBold';
+	src: local('RalewayBold'),
+		   url('../fonts/RalewayBold/RalewayBold.woff') format('woff');
+	  font-weight: bold;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewayRegular';
+	src: local('RalewayRegular'),
+		   url('../fonts/RalewayRegular/RalewayRegular.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewaySemiBold';
+	src: local('RalewaySemiBold'),
+		   url('../fonts/RalewaySemiBold/RalewaySemiBold.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RobotoBold';
+	src: local('RobotoBold'),
+		   url('../fonts/RobotoBold/RobotoBold.woff') format('woff');
+	  font-weight: bold;
+	  font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  
+  .visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  	@include respond(tab-land) {
+	font-size: 58%;
+}
+
+	@include respond(tab-port) {
+	font-size: 52%;
+}
+
+	@include respond(big-desktop) {
+	font-size: 75%;
+}
+
+}
+
+body {
+	font-family: "RalewayRegular", sans-serif;
+	color: #333;
+}
+
+.container {
+  width: auto;
+  max-width: 117rem;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.mt {
+	margin-top: 10rem;
+
+	@include respond(tab-land) {
+		margin-top: 0;
+	}
+
+	@include respond(tab-port) {
+		margin-top: 0;
+	}
+}
+
+.mb {
+	margin-bottom: 7.7rem;
+}
+
+.ml {
+	margin-left: 2rem;
+
+	@include respond(phone) {
+        margin-left: 7rem;
+    }
+}
+
+.ml-menus {
+	margin-left: -1rem;
+
+	@include respond(phone) {
+        margin-left: 5rem;
+    }
+}
