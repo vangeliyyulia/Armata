@@ -68,7 +68,7 @@ gulp.task("minifyjs", function() {
 });
 
 gulp.task("images", function() {
-  return gulp.src("img/**/*.{png,jpg,svg}")
+  return gulp.src("img/**/*.{png,jpg,svg,ico}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
@@ -102,7 +102,8 @@ gulp.task("copy", function() {
     "fonts/**/*.{woff,woff2}",
     "img/**/*.{jpg,png,svg,webp}",
     "js/**/*.js",
-    "libs/**/*.{js,css}"
+    "libs/**/*.{js,css}",
+    "css/**/*.css"
   ], {
     base: "."
   })

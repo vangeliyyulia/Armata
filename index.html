@@ -7,18 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preload" href="fonts/PFCentroSlabProBold.woff" as="font">
-    <link rel="preload" href="fonts/PFCentroSlabProMedium.woff" as="font">
-    <link rel="preload" href="fonts/RalewayBold.woff" as="font">
-    <link rel="preload" href="fonts/RalewayRegular.woff" as="font">
-    <link rel="preload" href="fonts/RalewaySemiBold.woff" as="font">
-    <link rel="preload" href="fonts/RobotoBold.woff" as="font">
+    <link rel="preload" href="fonts/PFCentroSlabProBold/PFCentroSlabProBold.woff" as="font">
+    <link rel="preload" href="fonts/PFCentroSlabProMedium/PFCentroSlabProMedium.woff" as="font">
+    <link rel="preload" href="fonts/RalewayBold/RalewayBold.woff" as="font">
+    <link rel="preload" href="fonts/RalewayRegular/RalewayRegular.woff" as="font">
+    <link rel="preload" href="fonts/RalewaySemiBold/RalewaySemiBold.woff" as="font">
+    <link rel="preload" href="fonts/RobotoBold/RobotoBold.woff" as="font">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/hamburger.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="libs/animate/animate.css">
-    <link rel="stylesheet" href="libs/Magnific-Popup/magnific-popup.css">
-    <link rel="stylesheet" href="css/main.css">
     <title>Armata</title>
 </head>
 <body>
@@ -619,14 +614,41 @@
         </form>
     </div>
    
-    <script src="libs/modernizr/modernizr.js"></script>
-    <script src="libs/jquery/jquery.min.js"></script>
-    <script src="libs/animate/animate-css.js"></script>
-    <script src="libs/waypoints/waypoints.min.js"></script>
-    <script src="libs/equalHeight/jquery.equalheights.min.js"></script>
-    <script src="libs/drawsvg/drawfillsvg.min.js"></script>
-    <script src="libs/owl/owl.carousel.min.js"></script>
-    <script src="libs/Magnific-Popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/common.js"></script>
+    <script>
+
+        //Load Libs CSS
+        var ms=document.createElement("link");ms.rel="stylesheet";
+        ms.href="libs/animate/animate.css";document.getElementsByTagName("head")[0].appendChild(ms);
+        var ms=document.createElement("link");ms.rel="stylesheet";
+        ms.href="css/hamburger.css";document.getElementsByTagName("head")[0].appendChild(ms);
+        var ms=document.createElement("link");ms.rel="stylesheet";
+        ms.href="css/owl.carousel.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+        var ms=document.createElement("link");ms.rel="stylesheet";
+        ms.href="libs/Magnific-Popup/magnific-popup.css";document.getElementsByTagName("head")[0].appendChild(ms);
+    
+        //Header Styles (compress & paste to header after release)
+        // var ms=document.createElement("link");ms.rel="stylesheet";
+        // ms.href="_header.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+        
+        //User Styles + Media Queries
+        var ms=document.createElement("link");ms.rel="stylesheet";
+        ms.href="css/main.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+    
+    </script>
+    
+    <!-- Load Scripts -->
+    <script>var scr = {"scripts":[
+        {"src" : "libs/modernizr/modernizr.js", "async" : false},
+        {"src" : "libs/jquery/jquery.min.js", "async" : false},
+        {"src" : "libs/waypoints/waypoints.min.js", "async" : false},
+        {"src" : "libs/animate/animate-css.js", "async" : false},
+        {"src" : "libs/plugins-scroll/plugins-scroll.js", "async" : false},
+        {"src" : "libs/equalHeight/jquery.equalheights.min.js", "async" : false},
+        {"src" : "libs/drawsvg/drawfillsvg.min.js", "async" : false},
+        {"src" : "libs/Magnific-Popup/jquery.magnific-popup.min.js", "async" : false},
+        {"src" : "libs/owl/owl.carousel.min.js", "async" : false},
+        {"src" : "js/common.js", "async" : false}
+        ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
 </body>
 </html>
