@@ -39,6 +39,7 @@
         line-height: 1.42;
         text-align: center;
         padding: 0 10rem;
+        max-width: 100%;
 
         @include respond(phone) {
             padding: 0;
@@ -114,6 +115,10 @@
     transition: all 1s ease;
     opacity: 0;
     transform: translate3d(100px, 0, 0);
+}
+
+.owl-item .slider__desc {
+    max-width: 100%;
 }
 
 .owl-item.active .slider__img,

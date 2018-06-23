@@ -81,14 +81,21 @@
 
         &--left {
             margin-left: 3rem;
+            width: 36.4rem;
         }
 
         &--center {
             margin-left: 4rem;
+            max-width: 30.6rem;
+
+            @include respond(tab-port) {
+                margin: 0;
+            }
         }
 
         &--right {
             margin-left: 8rem;
+            max-width: 32rem;
         }
     }
 
@@ -151,6 +158,7 @@
 .list__wrapper {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     @include respond(tab-port) {
         flex-direction: column;
